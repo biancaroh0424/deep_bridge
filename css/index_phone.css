@@ -6,10 +6,10 @@
         width: 94%;
     }
     .main_sec{
-        height: 70vh;
+        height: 100vh;
     }
     .section2{
-        height: 80vh;
+        height: 100vh;
     }
     .phone_talk{
         padding: 0 8px;
@@ -19,14 +19,16 @@
     }
     .hero_desc h2 {
         font-size: 36px;
+        width: 340px;
     }.hero_desc p{
-        font-size: 14px;
+        font-size: 16px;
     }
     .type_title h4, .vertical h4{
         font-size: 16px;
     }
     .sec2_desc_btn .title_desc h3, .insights h3, .network h3, .contact h3{
         font-size: 26px;
+        width: 340px;
     }
     .sec2_desc_btn .main_btn{
         width: 100%;
@@ -83,7 +85,8 @@
         gap: 40px;
     }
     .address_group{
-        width: 100%
+        width: 100%;
+        gap: 24px;
     }
     .address{
         justify-content: space-between;
@@ -124,5 +127,18 @@
         border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: 0 0 8px 8px;
         backdrop-filter: blur(1.6px);
+    }
+    .address{
+        flex-direction: column;
+        gap: 4px;
+    }
+    .sec2_desc_btn,.network_desc_btn{
+        gap: 48px;
+    }
+    .bottom_nav_tablet_active{
+        height: 84%;
+    }
+    .legal_content ul{
+        width: 100%;
     }
 }

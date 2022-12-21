@@ -20,7 +20,7 @@ function phoneView(xs){
         topNavPhone.style.display='flex';
 
          var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
           slidesPerGroup: 1,
           loop: true,
