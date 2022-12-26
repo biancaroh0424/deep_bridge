@@ -70,7 +70,7 @@
 .contact{
     padding: 56px 0;
 }
-.section2 h3, .insights h3 ,.network h3,.contact h3{
+.section2 h3, .network h3,.contact h3{
     color: #F3F4F7;
 }
 .sec2_desc_btn{
@@ -84,8 +84,14 @@
     flex-direction: column;
     gap: 24px;
 }
-.title_desc p,.insights p,.contact p{
+.title_desc p,.contact p{
     color:#E2E3EF;
+}
+.insights h4,.insights p{
+    color:#505158 !important;
+}
+.insights h3{
+    color:#141415;
 }
 .sec2_desc_btn .main_btn{
     background: #1C45AE;
@@ -116,26 +122,26 @@
     gap: 24px;
     z-index: 1;
 }
-.type_title h4,.vertical h4{
+.services .type_title h4,.type_title h4,.vertical h4{
     color: #E2E3EF
-}
-.services .type_title h4{
-    color: #505158
 }
 .services{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f7f7f7;
+    background: #1C45AE;
 }
 .services .content,.insights .content,.contact .content, .network .content_horizontal_network{
     padding: 80px 0;
     width: 1180px;
     height: 100%;
 }
+.insights{
+    background: #f7f7f7;
+}
 
 .services ul li{
-    color: #29282E;
+    color: #f3f4f7;
     font-family: 'Montserrat';
     font-size: 2.5rem;
     font-weight: 700;
@@ -146,7 +152,7 @@
     justify-content: flex-start;
     padding: 12px 0;
     width: 560px;
-    border-bottom: 4px solid #1C45AE;
+    border-bottom: 4px solid #9ca4b4;
 }
 
 .vertical{
@@ -169,7 +175,7 @@
     width: 100%;
 }
 .services .detail_btn{
-    color: #0e0a21;
+    color: #F3F4F6;
 }
 .detail_btn{
     color:#F3F4F6;
@@ -178,7 +184,7 @@
 .detail_btn img{
     margin-left: 16px;
 }
-.insights,.contact{
+.contact{
     background-color: #29282E;
     display: flex;
     justify-content: center;
@@ -188,38 +194,46 @@
     width: 80%;
 }
 .card{
-    width: 280px;
     overflow: hidden;
-    border: 1px solid #F3F4F6;
+    border: none;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.3);
 }
 .card_img{
     width: 100%;
-    border: none;
-    border-radius: 8px 8px 0 0;
-    height: 196px;
-    background-color: #000;
+    height: 520px;
+    overflow: hidden;
+    background-color: #1C45AE;
 }
 .card_img img{
     width: 100%;
     height: 100%;
+    object-fit:cover;
     transition: .24s ease;
 }
 .card_img img:hover{
-    opacity: 0.4;
+    opacity: 0.2;
+}
+.card_tag{
+    padding: 24px 16px;
+}
+.tag{
+    background-color:#29282E;
+    border: none;
+    border-radius: 16px;
+    padding: 4px 8px;
+    color: #F3F4F6;
+    font-size: 13px;
 }
 .card_title_desc{
     width: calc(100%);
-    padding: 24px 16px;
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 .card_title{
-color:#F3F4F7;
+color:#29282E;
 font-family: 'Montserrat', sans-serif;
 font-size: 1.5rem;
 font-weight: 700;
@@ -228,17 +242,6 @@ text-overflow: ellipsis;
 overflow: hidden;
 }
 
-.card_title_desc span:last-child{
-    color: #E2E3EF;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.875rem;
-    display: flex;
-    word-break: break-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 74px;
-    
-}
 .card_group{
     width: 100%;
     display: flex;
@@ -254,6 +257,10 @@ overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+}
+.insights .detail_btn{
+    color:#141415
 }
 .network{
     padding: 80px 0;
@@ -285,6 +292,8 @@ overflow: hidden;
     border-radius: 8px;
     font-weight: 700;
     padding: 12px;
+    width: 380px;
+    justify-content: center;
 }
 
 .submit_area{
@@ -376,11 +385,26 @@ overflow: hidden;
     z-index: 0;
 }
 .swiper-button-next, .swiper-button-prev{
-    color: white !important;
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    height: 48px !important;
+    width: 48px !important;
+    border: none;
+    border-radius: 100%;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
     font-size: 24px !important;
 }
 .swiper{
     padding: 0 24px 40px 24px !important
+}
+
+.submit_area .btn_main{
+    width: 160px;
+}
+.swiper-wrapper{
+    width: 80% !important;
 }

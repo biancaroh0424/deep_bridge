@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Post</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/add_post.css">
+</head>
+<body>
+    <h2 class="add_title">Add a Post</h2>
+    <form action="#" method="get" class="add_post_form">
+        <div class="title_type">
+        <label for="title" class="post_title">
+            <h3 class="choose_type_of">title</h3>
+            <input type="text" name="" id="title" placeholder="Write a title" class="post_title_area">
+        </label>
+        <div class="type_of_group">
+            <h3 class="choose_type_of">Choose your post type</h3>
+            <div>
+        <label for="type_of" class="type_of">
+            <input type="radio" name="type_of" id="">
+            <span>Article</span>
+        </label>
+
+        <label for="type_of" class="type_of">
+            <input type="radio" name="type_of" id="">
+            <span>Video</span>
+        </label>
+
+        <label for="type_of" class="type_of">
+            <input type="radio" name="type_of" id="">
+            <span>Case Study</span>
+        </label>
+        </div>
+        </div>
+        </div>
+        <label for="attatch_preview_img" class="attatch_file_btn">
+            <img id="output">
+            <div class="upload">
+            <img src="../images/upload.svg" alt="">
+            <span>Upload your post cover Image</span> 
+
+            </div>
+            <input type="file" accept="image/*" onchange="loadFile(event)" name="" id="attatch_preview_img">
+        </label>
+        
+    <div id="container">
+        <textarea id="editor"></textarea>
+    </div>
+    <button type="submit" class="post_btn">Post</button>
+    </form>
+
+
+    
+    <script src="https://cdn.ckbox.io/CKBox/1.2.0/ckbox.js"></script>
+    <!--
+        The "super-build" of CKEditor 5 served via CDN contains a large set of plugins and multiple editor types.
+        See https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html#running-a-full-featured-editor-from-cdn
+    -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/super-build/ckeditor.js"></script>
+    <script src="js/textdeitor.js"></script>
+    <script>
+        const loadFile = function(event){
+            const output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function(){
+                URL.revokeObjectURL(output.src)
+            };
+            if(output.src==output.src){
+                document.querySelector('.upload').style='display:none';
+            }
+        };
+    </script>
+</body>
+</html>
+
+    
+
+
+    

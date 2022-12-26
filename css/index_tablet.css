@@ -67,21 +67,8 @@
     .horizontal,.vertical, .vertical ul, .services ul li{
         width: 100%;
     }
-    .services{
-        background: #1c45ae;
-    }
-    .services .type_title h4, .services a,.services .detail_btn{
-        color: #F3F4F6;
-    }
-    .services li{
-        border-color: #9ca4b4;
-    }
-    .card_group{
-        justify-content: flex-start;
-    }
-    .card_group,.card{
-        width: 100%;
-    }
+
+    
     .content_horizontal_network{
         justify-content: flex-start;
         flex-direction: column;
@@ -123,7 +110,7 @@
         border-radius: 0 0 8px 8px;
         backdrop-filter: blur(1.6px);
     }
-
+   
 }   
 
 

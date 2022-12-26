@@ -5,11 +5,14 @@
         margin: auto;
         width: 94%;
     }
+    section{
+        padding: 24px 0;
+    }
     .main_sec{
         height: 100vh;
     }
     .section2{
-        height: 100vh;
+        height: 100%;
     }
     .phone_talk{
         padding: 0 8px;
@@ -18,9 +21,10 @@
         width: 100%;
     }
     .hero_desc h2 {
-        font-size: 36px;
-        width: 340px;
-    }.hero_desc p{
+        font-size: 32px;
+        width: 320px;
+    }
+    .hero_desc p{
         font-size: 16px;
     }
     .type_title h4, .vertical h4{
@@ -28,7 +32,7 @@
     }
     .sec2_desc_btn .title_desc h3, .insights h3, .network h3, .contact h3{
         font-size: 26px;
-        width: 340px;
+        width: 98%;
     }
     .sec2_desc_btn .main_btn{
         width: 100%;
@@ -70,6 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 12px;
     }
     .submit_area .btn_main{
         width: 30%;
@@ -104,9 +109,7 @@
     .network_desc_btn{
         justify-content: flex-start;
     }
-    .card_img{
-        height: 120px;
-    }
+    
     .legal_content ul li{
         width: 100%;
         display: flex;
@@ -141,4 +144,11 @@
     .legal_content ul{
         width: 100%;
     }
+    .card_img{
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        background-color: #1C45AE;
+    }
+    
 }
