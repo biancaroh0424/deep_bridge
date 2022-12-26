@@ -5,6 +5,10 @@
     const bottomNavTablet = document.getElementById('bottom_nav_tablet');
     const letsTalk = document.querySelector('.lets_talk');
 
+    const topnav_com = $("#topnav_computer");
+            const topnav_tablet = $("#topnav_tablet");
+            const topnav_phone=$("#topnav_phone")
+
 
     function device_phoneView(xxs){
       if (xxs.matches) { // If media query matches
@@ -12,7 +16,6 @@
           topNavTablet.style.display = 'none';
           topNavComputer.style.display = 'none';
           topNavPhone.style.display='flex';
-  
         }
   }
 

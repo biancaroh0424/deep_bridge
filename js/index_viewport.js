@@ -11,13 +11,15 @@
     const letsTalk = document.querySelector('.lets_talk');
 
 
+    //cursor mobile mode doesn't appear : VERY IMPORTANT!!!
+
     function device_phoneView(xxs){
       if (xxs.matches) { // If media query matches
           letsTalk.style.display = 'none';
           topNavTablet.style.display = 'none';
           topNavComputer.style.display = 'none';
           topNavPhone.style.display='flex';
-  
+          document.querySelector('.cursor').style.display = 'none';
         }
   }
 

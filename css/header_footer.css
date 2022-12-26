@@ -2,13 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    position: sticky;
+    background: transparent;
+    position: absolute;
     top: 0;
     z-index: 10;
     width: 100vw;
     height: 64px;
-    transition: top 0.2s ease-in-out;
+    transition: top 0.36s ease-in-out;
+}
+.white .nav_right li{
+    color: #fff;
 }
 .nav-up {
     top: -64px;
@@ -222,4 +225,7 @@ h4{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#lang_option_tablet li{
+    color: #29282E;
 }

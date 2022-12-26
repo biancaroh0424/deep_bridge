@@ -1,0 +1,14 @@
+@media (max-width: 1280px){
+.section_hero_title_menu,.blog_col{
+    width: 88%;
+    margin: auto;
+}
+.section_hero_tag_title h3{
+    font-size: 16px
+}
+.section_hero_tag_title h4{
+    width: 88%;
+    font-size: 46px;
+}
+
+}

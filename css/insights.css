@@ -76,9 +76,16 @@ opacity: 0.2;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
+    gap: 16px;
+}
+.blog_section_col_group{
+    width: 100%;
+    display: flex;
+    gap: 16px;
 }
 .blog_section_col_small{
-    width: 24%;
+    width: 50%;
+    gap: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -165,6 +172,7 @@ position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 16px;
 }
 
 .blog_big,.blog_normal_img,.blog_row_small_card_area{

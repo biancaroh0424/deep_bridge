@@ -1,0 +1,23 @@
+/* phone layout */
+
+@media (max-width: 725px){
+    .section_hero_title_menu, .blog_col{
+        margin: auto;
+        width: 94%;
+    }
+    .section_hero_tag_title h4{
+        font-size: 34px;
+    }
+    .blog_menu ul li a{
+        font-size: 20px;
+    }
+    .blog_title {
+        font-size: 1.6rem;
+    }
+    .blog_section_col_small,.blog_row_li{
+        flex-direction: column;
+    }
+    .blog_row_small_card_area{
+        height:280px;
+    }
+}

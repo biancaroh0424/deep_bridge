@@ -32,7 +32,6 @@
         align-items: flex-start;
         gap: 8px;
         overflow-y: scroll;
-        height: 580px;
     }
     .sub_bottom_nav_tablet_li{
         display: flex;
