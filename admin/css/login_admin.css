@@ -11,14 +11,19 @@ h1 img{
     width: 180px;
 }
 form{
+    height: 240px;
+}
+fieldset{
+    height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 16px;
     width: 340px;
-    gap: 24px;
 }
 
 input[type="text"],input[type="password"]{
     width: 100%;
+    font-size: 0.8rem;
     padding: 8px 16px;
     border: none;
     border-bottom: 2px solid #1C45AE;
@@ -40,4 +45,26 @@ button{
     color: #fff;
     font-family: 'montserrat';
     font-size: 1rem;
+}
+
+span{
+    font-size: 0.8rem;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.error_message_myinfo{
+    color: rgb(246, 80, 80);
+    font-weight: 700;
+}
+.signup_error_input{
+    border-bottom:rgb(246, 80, 80) 2px solid;
+}
+.input_group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

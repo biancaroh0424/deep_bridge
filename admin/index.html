@@ -10,11 +10,109 @@
 </head>
 <body>
     <h1><img src="../images/menu_logo.svg" alt=""></h1>
-    <form action="post" name="login">
-        <input type="text" name="login_id" id="" placeholder="ID">
-        <input type="password" name="" id="" placeholder="PASSWORD">
+    <form name="login" onsubmit="return formLogin()">
+        <fieldset>
+            <div class="input_group">
+        <input type="text" name="login_id" id="admin_id" placeholder="ID">
+        <span class="error_message_myinfo"id="errorId" onkeyup="checkIdExist(this.value)"></span>
+        </div>
+        <input type="password" name="" id="admin_pw" placeholder="PASSWORD">
+        <span class="error_message_myinfo"id="errorPw"></span>
+        <div class="row">
+        <span>Show Password</span><input type="checkbox" class="" onclick="showPw()"></div>
         <button type="submit">LOGIN</button>
+        </fieldset>
     </form>
+    <script src="js/login.js"></script>
+    <script>
+function checkEmailExist(g_email){
+
+let idCheck = document.getElementById("adminId");
+let idValid = idCheck.value.length;
+// let idReg = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+let pwValid = document.getElementById("admin_pw");
+let errorMessage = document.getElementById("errorId");
+let errorPw = document.getElementById("errorPw");
+const errorIdBorder = document.getElementById("adminId");
+
+
+
+if (idCheck.value==""){
+errorMessage.innerHTML = "Please write your id!";
+errorMessage.classList = "error_message_myinfo";
+errorIdBorder.classList="signup_error_input";
+return false;
+
+// }else if (idValid < 10 || idValid > 64){
+// errorMessage.innerHTML = "Please write valid Email";
+// errorMessage.classList = "error_message_myinfo";
+// errorIdBorder.classList="signup_error_input";
+// return false;
+// }else if(idCheck.value == idReg){
+// errorMessage.innerHTML = "Please write valid Email";
+// errorMessage.classList = "error_message_myinfo";
+// errorIdBorder.classList="signup_error_input";
+// return false;
+
+} else{
+var xmlhttp = fncGetXMLHttpRequest();
+
+// 아이디를 체크할 php 페이지에 체크 하려하는 id 값을 파라미터로 전송
+//     alert('id_check_ajax.php?user_email='+g_email);
+// return false;
+
+
+xmlhttp.open('GET', 'email_check_ajax.php?user_email='+g_email, false);
+
+xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
+
+xmlhttp.onreadystatechange = function (){
+if( xmlhttp.readyState=='4' && xmlhttp.status==200 ){
+    if( xmlhttp.status==500 || xmlhttp.status==404 || xmlhttp.status==403 )
+        alert( xmlhttp.status );
+    else{
+        var txt = xmlhttp.responseText;
+        txt = txt.replace(/\n/g, "");
+        txt = txt.replace(/\r/g, ""); 
+        txt = txt.replace(/\s+/, ""); 
+        txt = txt.replace(/\s+$/g, ""); 
+
+        if(txt=='N') {
+            errorMessage.innerHTML = 'This email already taken🥲 Try another!';
+            errorMessage.classList = 'error_message_myinfo';
+        } else{
+            errorIdBorder.classList = 'login_input';
+            errorMessage.innerHTML = 'This email can use!';
+            errorMessage.classList= 'valid_myinfo';
+        }
+    }
+}
+}
+}
+xmlhttp.send();
+}
+
+function fncGetXMLHttpRequest(){
+if (window.ActiveXObject){
+try{
+return new ActiveXObject("Msxml2.XMLHTTP");
+}
+catch(e){
+try{
+    return new ActiveXObject("Microsoft.XMLHTTP");
+} 
+catch(e1) { return null; }
+}
+//IE 외 파이어폭스 오페라 같은 브라우저에서 XMLHttpRequest 객체 구하기
+} else if (window.XMLHttpRequest){
+return new XMLHttpRequest();
+} else{
+return null;
+}
+}
+
+</script>
 </body>
 </html>
 
